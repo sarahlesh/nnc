@@ -55,6 +55,18 @@ p{
 	line-height: 1.5;
 }
 
+.content-area{
+	padding-bottom: 100px;
+}
+
+.label-hidden{
+	visibility: hidden;
+	position: absolute;
+	top:-99999px;
+	width: 1px;
+	height: 1px;
+}
+
 // ====== Navigation ======
 
 div.bottom_header_wrap{
@@ -108,7 +120,7 @@ div.bottom_header_wrap{
 
 
 
-// Header style changes
+// ====== Header style changes ======
 .home{
 	.hero{
 		background-size: cover;
@@ -121,7 +133,7 @@ div.bottom_header_wrap{
 		.hero-content{
 			display:block;
 			background: rgba(255,255,255,0.7);
-			max-width: 0px;
+			max-width: 750px;
 			color: black;
 			text-align: center;
 			padding: 20px;
@@ -164,7 +176,7 @@ div.bottom_header_wrap{
 	}
 }
 
-// front-page edits
+// ====== front-page edits ======
 .wrapper{
 	padding: 100px 0;
 	.home_latest_news{
@@ -227,7 +239,7 @@ div.bottom_header_wrap{
 }
 
 
-// Grid on media organizations page
+// ====== Grid on media organizations page =======
 .grid-item {
   float: left;
   width: 33.33%;
@@ -238,7 +250,7 @@ div.bottom_header_wrap{
   transition: all 0.3s ease;
 }
 
-// footer
+// ====== footer =======
 
 footer#site_footer{
 	h5{
@@ -266,7 +278,7 @@ footer#site_footer{
 // ===== complaints pages =====
 .complaints-cat, .single-decisions{
 	h1{
-		margin: 50px 0;
+		margin: 0 0 50px 0;
 	}
 }
 .single-decisions{
@@ -295,6 +307,23 @@ footer#site_footer{
 
 .complaint-container{
 	margin-bottom: 100px;
+}
+
+.decisions-search{
+	input[type="search"]{
+		display: inline-block;
+		flex: 1 1 400px;
+		padding: 17px;
+		margin: 0;
+		height: 100%;
+		border-radius: 3px;
+	}
+	.button{
+		flex: 0 1 150px;
+		border-radius: 3px;
+		margin-left: 10px;
+		background: #5ad3d6;
+	}
 }
 
 

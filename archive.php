@@ -1,7 +1,5 @@
 <?php
-/**
-   * Template Name: Decisions - Dismissed with Reservation
-   */
+
 get_header(); ?>
 
 <div id="primary" class="content-area complaints-cat">
@@ -10,22 +8,10 @@ get_header(); ?>
 
 
 		<main id="main" class="site-main" role="main">
-		<h1><?php the_title(); ?></h1>
+		<h1>Category: <?php single_cat_title() ?></h1>
+		
 		<?php @include('decisions-search.php') ?>
 
-		<?php 
-		    query_posts(array( 
-		        'post_type' => 'decisions',
-		        'posts_per_page'=> 99999999999999999,
-		        'tax_query' => array(
-		             array (
-		                 'taxonomy' => 'category',
-		                 'field' => 'slug',
-		                 'terms' => 'dismissed-with-reservation',
-		             )
-		         ),
-		    ) );  
-		?>
 		<div class="complaint-container">
 		<?php while (have_posts()) : the_post(); ?>
 			<article class="complaint flex-container">
