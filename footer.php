@@ -30,49 +30,6 @@
 	</div><!-- .large-4 .footer_widget -->
 
   </div><!-- .row .footer_widget_wrap -->
-
-  <?php $footer_social_animation = get_theme_mod( 'footer_social_animation' ); ?>
-  <div class="footer_social">
-
-    <div class="row">
-      <div class="large-12 columns">
-        <ul class="<?php if ( $footer_social_animation != 'none' ) { echo 'wow '; echo $footer_social_animation; };  ?>">
-
-			<?php $twitter_link = get_theme_mod( 'twitter_link', '' ); if ( $twitter_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $twitter_link ); ?>"><i class="fa fa-twitter fa-2x"></i></a></li>
-			<?php endif; ?>
-
-			<?php $facebook_link = get_theme_mod( 'facebook_link', '' ); if ( $facebook_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $facebook_link ); ?>"><i class="fa fa-facebook fa-2x"></i></a></li>
-			<?php endif; ?>
-
-			<?php $google_link = get_theme_mod( 'google_link', '' ); if ( $google_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $google_link ); ?>"><i class="fa fa-google-plus fa-2x"></i></a></li>
-			<?php endif; ?>
-
-			<?php $instagram_link = get_theme_mod( 'instagram_link', '' ); if ( $instagram_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $instagram_link ); ?>"><i class="fa fa-instagram fa-2x"></i></a></li>
-			<?php endif; ?>
-
-			<?php $vimeo_link = get_theme_mod( 'vimeo_link', '' ); if ( $vimeo_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $vimeo_link ); ?>"><i class="fa fa-vimeo-square fa-2x"></i></a></li>
-			<?php endif; ?>	
-
-			<?php $youtube_link = get_theme_mod( 'youtube_link', '' ); if ( $youtube_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="fa fa-youtube fa-2x"></i></a></li>
-			<?php endif; ?>
-
-			<?php $pinterest_link = get_theme_mod( 'pinterest_link', '' ); if ( $pinterest_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $pinterest_link ); ?>"><i class="fa fa-pinterest fa-2x"></i></a></li>
-			<?php endif; ?>
-
-			<?php $linkedin_link = get_theme_mod( 'linkedin_link', '' ); if ( $linkedin_link  ) : ?> 
-			<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="fa fa-linkedin fa-2x"></i></a></li>
-			<?php endif; ?>
-
-        </ul>
-      </div><!-- .large-12 -->
-    </div><!-- .row -->
     
   </div><!-- .footer_social -->
 

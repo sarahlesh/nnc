@@ -70,28 +70,22 @@
 
 <div class="bottom_header_wrap .contain-to-grid">
 
-  <div class="row">
+  <div class="row flex-container">
 
   <?php // Fill variable with dontation button choice
     $button_show = get_theme_mod( 'donation_button_show' ); ?>
 
     <!-- Bottom Nav -->
-    <div class="<?php if ( $button_show == '1' ) : echo 'large-9'; else : echo 'large-12'; endif; ?> columns">
+    <div class="nav">
       <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true; is_hover: true">
 
-          <ul class="title-area">
-            <li class="name"></li>
-             <!-- Mobile Menu Toggle -->
-            <li class="toggle-topbar menu-icon"><a href="#"><?php _e('Menu','rescue'); ?></a></li>
-          </ul><!-- .title-area -->
-
-          <section class="top-bar-section">
+      <section class="top-bar-section">
 
 			<?php 
 				$defaults = array(
 			        'theme_location'  => 'header_bottom',
 			        'container'       => false,
-			        'menu_class'      => 'left bottom_nav',
+			        'menu_class'      => 'flex-container bottom_nav',
 			        'depth'           => 5,
 			        'fallback_cb'     => false,
 			        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -112,7 +106,7 @@
     ?>
 
     <!-- Donation Button -->
-    <div class="large-3 columns">
+    <div class="donation-btn-header">
 
       <div class="donation_button">
         <a href="<?php echo esc_url( get_theme_mod( 'donation_button_link', '#' ) ); ?>" class="button large <?php if ( $donate_button_animate != 'none' ) { echo 'wow '; echo $donate_button_animate; };  ?>" >
