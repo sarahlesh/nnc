@@ -1,4 +1,4 @@
-/*
+/*!
  Theme Name:   Advocator Child
  Theme URI:    https://rescuethemes.com
  Description:  Advocator Child Theme
@@ -8,11 +8,5 @@
  Version:      1.0
  Tags: white, green, custom-menu, translation-ready, threaded-comments, theme-options, responsive-layout, two-columns, custom-colors, featured-images
  Text Domain:  advocator-child
-*/
-
-
-/* =Theme customization starts here
--------------------------------------------------------------- */
-
-.home .hero{background-size:cover;background-repeat:no-repeat;background-position:center}.grid-item{float:left;width:33.33%;padding:2%;margin-bottom:10px;list-style:none;-webkit-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}.grid{margin:0;padding:0}.grid-item:hover{-webkit-transform:scale(1.05) translateY(-5px);-ms-transform:scale(1.05) translateY(-5px);transform:scale(1.05) translateY(-5px)}@media (max-width:700px){.grid-item{width:50%}}@media (max-width:460px){.grid-item{width:100%;text-align:center}.grid-item img{max-height:175px}}
+*/.flex-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.home .hero{background-size:cover;background-repeat:no-repeat;background-position:center;min-height:80vh;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.home .hero .hero-content{display:inline-block;background:rgba(255,255,255,.7);color:#000;border-radius:20px}.grid-item{float:left;width:33.33%;padding:2%;margin-bottom:10px;list-style:none;-webkit-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}.grid{margin:0;padding:0}.grid-item:hover{-webkit-transform:scale(1.05) translateY(-5px);-ms-transform:scale(1.05) translateY(-5px);transform:scale(1.05) translateY(-5px)}@media (max-width:700px){.grid-item{width:50%}}@media (max-width:460px){.grid-item{width:100%;text-align:center}.grid-item img{max-height:175px}}
 /*# sourceMappingURL=style.css.map */
