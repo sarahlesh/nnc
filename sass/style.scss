@@ -13,7 +13,28 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
-// general
+// ====== Breakpoints Mixins ======
+
+$breakpoints: (
+	'xsmall': (max-width: 400px ),
+  'small':  ( max-width:  550px ),
+  'medium': ( max-width:  800px ),
+  'large':  ( max-width: 1000px )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// ====== general ======
 .flex-container{
 	display: flex;
 	flex-wrap: wrap;
@@ -34,10 +55,11 @@ p{
 	line-height: 1.5;
 }
 
-// Navigation 
+// ====== Navigation ======
 
 div.bottom_header_wrap{
 	background: white;
+	border-bottom: 1px solid #efefef;
 	color: black;
 	a{
 		color: black !important;
@@ -99,10 +121,11 @@ div.bottom_header_wrap{
 		.hero-content{
 			display:block;
 			background: rgba(255,255,255,0.7);
-			max-width: 750px;
+			max-width: 0px;
 			color: black;
 			text-align: center;
-			padding: 30px;
+			padding: 20px;
+			margin: 40px;
 			.flex-container{
 				justify-content: space-between;
 			}
@@ -117,6 +140,7 @@ div.bottom_header_wrap{
 		}
 		.hero-cta-container{
 			flex: 0 1 300px;
+			margin: 0 auto;
 			.hero-cta{
 				display: block;
 				color: white;
@@ -179,6 +203,7 @@ div.bottom_header_wrap{
 		flex: 1 1 300px;
 		min-width: 300px;
 		margin-left: 30px;
+		text-align: center;
 		.fb_iframe_widget{
 			width: 100%;
 		}
@@ -193,6 +218,7 @@ div.bottom_header_wrap{
 		max-width: 300px;
 		text-transform: uppercase;
 		margin: 0 auto;
+		margin-bottom: 50px;
 		border-radius: 3px;
 		&:hover, &:focus{
 			opacity: 0.9;
@@ -226,7 +252,51 @@ footer#site_footer{
 	.footer_widget_wrap{
 		margin-bottom: 0;
 	}
+	.footer_widget{
+		max-width: 400px;
+		margin: 0 auto;
+		@include respond-to('medium') {
+		    float: none !important;
+		    max-width: 700px;
+		    text-align: left !important;
+		  }
+	}
 } 
+
+// ===== complaints pages =====
+.complaints-cat, .single-decisions{
+	h1{
+		margin: 50px 0;
+	}
+}
+.single-decisions{
+	h1{
+		font-size: 30px;
+	}
+	p{
+		line-height: 1.7;
+	}
+}
+.complaint{
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #efefef;
+	h4{
+		font-size: 21px;
+		flex: 1 1 400px;
+		display: inline-block;
+	}
+	.button{
+		padding: 10px;
+		border-radius: 3px;
+		flex: 0 1 150px;
+	}
+}
+
+.complaint-container{
+	margin-bottom: 100px;
+}
+
 
 .grid{
 	margin: 0;
