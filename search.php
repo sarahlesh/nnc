@@ -31,7 +31,7 @@ get_header(); ?>
 
 				<article class="complaint flex-container">
 								<h4><?php the_title() ?></h4>
-								<a class="button" href="<?php the_permalink() ?>">Learn More ></a>
+								<a class="button" href="<?php the_permalink() ?>">Read More ></a>
 							</article>
 
 			<?php endwhile; ?>

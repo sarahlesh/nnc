@@ -28,6 +28,7 @@ get_header(); ?>
 <div class="wrapper flex-container">
   <!-- News Area -->
   <div class="home_latest_news">
+  <h2>Latest News</h2>
     <?php 
         query_posts(array( 
             'post_type' => 'post',

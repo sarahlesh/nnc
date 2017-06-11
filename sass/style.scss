@@ -182,9 +182,13 @@ div.bottom_header_wrap{
 	.home_latest_news{
 		flex: 3 1 400px;
 		padding: 0;
+		h2{
+			text-transform: uppercase;
+			font-weight: 200;
+		}
 		article{
 			align-items: center;
-			margin: 50px;
+			margin: 50px 50px 50px 0;
 			h4{
 				font-weight: 600;
 				font-size: 20px;

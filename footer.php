@@ -23,7 +23,7 @@
 	</div><!-- .large-4 .footer_widget -->
 
 
-  	<div class="large-4 columns footer_widget">
+  	<div class="large-4 columns footer_widget" id="newsletter">
 
 		<?php if ( is_active_sidebar( 'footer_sidebar-3' ) ) { dynamic_sidebar( 'footer_sidebar-3' ); } ?>
 
