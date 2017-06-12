@@ -40,18 +40,18 @@ $breakpoints: (
 	flex-wrap: wrap;
 }
 
-.wrapper{
+.wrapper, .row{
 	margin: 0 auto;
 	max-width: 1080px;
-	max-width: 95%;
+	width: 95%;
 }
 
 img{
 	max-width: 100%;
 }
 
-p{
-	font-size: 20px;
+p, ul, li, ol{
+	font-size: 18px;
 	line-height: 1.5;
 }
 
@@ -239,6 +239,28 @@ div.bottom_header_wrap{
 		&:hover, &:focus{
 			opacity: 0.9;
 		}
+	}
+}
+
+// ====== File a complaint page ======
+
+.complaint-categories{
+	a{
+		text-decoration: underline;
+	}
+	.flex-container{
+		align-items: center;
+	}
+	.image{
+		flex: 0 1 64px;
+		margin: 0 40px 0 0;
+	}
+
+	p{
+		flex: 1 1 400px;
+	}
+	.button{
+		text-decoration: none;
 	}
 }
 

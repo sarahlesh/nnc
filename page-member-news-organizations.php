@@ -19,7 +19,11 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php if( have_rows('members_grid') ): ?>
-
+					<form class="flex-container" id="member-search-form">
+						<label for="search-member" class="label-hidden">Search for a member</label>
+						<input type="search" id="search-member" placeholder="Find a Member">
+						<input type="submit" class="button">
+					</form>
 					<ul class="grid">
 
 					<?php while( have_rows('members_grid') ): the_row(); 
@@ -29,10 +33,12 @@ get_header(); ?>
 						$link = get_sub_field('link_to_member');
 						$name = get_sub_field('member_name');
 
+						$nameClass = str_replace(' ', '', $name);
+						$nameClass = strtolower($nameClass);
 
 						?>
 
-						<li class="grid-item">
+						<li class="grid-item <?php echo $nameClass ?>">
 
 							<?php if( $link ): ?>
 								<a href="<?php echo $link; ?>" target="_blank">

@@ -1,31 +1,67 @@
 <?php
+/**
+ * The template for displaying Archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ */
 
 get_header(); ?>
 
-<div id="primary" class="content-area complaints-cat">
+<div id="primary" class="content-area">
+
+  <div class="row" role="main">
+
+    <div class="large-12 columns">
+
+		<?php if ( have_posts() ) : ?>
+
+			<header class="page-header">
+
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<p class="taxonomy-description">', '</p>' );
+				?>
+
+			<hr> 
+			
+			</header><!-- .page-header -->
+
+</div><!-- .large-12 .columns -->
+</div><!-- .row -->
 
   <div class="row" role="main">
 
 
 		<main id="main" class="site-main" role="main">
-		<h1>Category: <?php single_cat_title() ?></h1>
-		
-		<?php @include('decisions-search.php') ?>
 
-		<div class="complaint-container">
-		<?php while (have_posts()): the_post(); ?>
-			<article class="complaint flex-container">
-				<h4><?php the_title() ?></h4>
-				<a class="button" href="<?php the_permalink() ?>">Learn More ></a>
-			</article>
-		<?php endwhile; ?>
-		</div> 
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+				?>
+
+			<?php endwhile; ?>
+
+			<?php rescue_paging_nav(); ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'content', 'none' ); ?>
+
+		<?php endif; ?>
 
 		</main><!-- #main -->
 
 
-  </div><!-- .row -->
 
-</div><!-- #primary -->
+    </div><!-- .row -->
+
+</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>
