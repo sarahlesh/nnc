@@ -22,7 +22,6 @@ get_header(); ?>
 					<form class="flex-container" id="member-search-form">
 						<label for="search-member" class="label-hidden">Search for a member</label>
 						<input type="search" id="search-member" placeholder="Find a Member">
-						<input type="submit" class="button">
 					</form>
 					<ul class="grid">
 
@@ -75,6 +74,8 @@ get_header(); ?>
 
 </div><!-- #primary -->
 <script src="<?php echo get_home_url() ?>/wp-content/themes/advocator-child/js/jQuery.js"></script>
+<script src="<?php echo get_home_url() ?>/wp-content/themes/advocator-child/js/isotope.js"></script>
+
 <script src="<?php echo get_home_url() ?>/wp-content/themes/advocator-child/js/masonry.min.js"></script>
 <script src="http://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 <script src="<?php echo get_home_url() ?>/wp-content/themes/advocator-child/js/scripts.js"></script>

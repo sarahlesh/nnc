@@ -276,6 +276,25 @@ div.bottom_header_wrap{
   transition: all 0.3s ease;
 }
 
+// ====== Ethics =======
+
+.ethics{
+	.flex-container{
+		align-items: center;
+	}
+	li{
+		margin-bottom: 40px;
+	}
+}
+.ethics-photo{
+	flex: 1 1 300px;
+	margin-right: 40px;
+}
+
+.ethics-content{
+	flex: 4 1 300px;
+}
+
 // ====== footer =======
 
 footer#site_footer{

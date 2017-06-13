@@ -1,8 +1,15 @@
 $(function() {
 	var $container = $('.grid');
+	  $container.imagesLoaded(function(){
+	      $container.masonry({
+			  itemSelector: '.grid-item',
+			  percentPosition: true
+	      	
+	      });
+	  });
 
 	$('#member-search-form').on('keyup', function(e){
-		var memberClass = e.target;
+		var memberClass = e.target.value;
 
 		var gridItem = $(".grid-item");
 
@@ -11,22 +18,29 @@ $(function() {
 		    return (' ' + element.className + ' ').indexOf(cls) > -1;
 		}
 		gridItem.each(function(i, e){
-			var memberHasClass = hasClass(e, 'toronto');
+			console.log(memberClass);
+			var memberHasClass = hasClass(e, memberClass);
 			console.log(memberHasClass)
 			memberHasClass
 				if(memberHasClass == false){
 					$(e).hide();
+					      $container.masonry({
+							  itemSelector: '.grid-item:visible',
+							  percentPosition: true
+					      	
+					      });
+				}
+				if(memberHasClass == true){
+					     $(e).show();
+					      $container.masonry({
+							  itemSelector: '.grid-item:visible',
+							  percentPosition: true
+					      	
+					      });
 				}
 			})
 
 		})
 
-	  $container.imagesLoaded(function(){
-	      $container.masonry({
-			  itemSelector: '.grid-item',
-			  percentPosition: true
-	      	
-	      });
-	  });
 
 });
